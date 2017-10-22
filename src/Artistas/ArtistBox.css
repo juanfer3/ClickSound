@@ -1,15 +1,15 @@
 .ArtixBox{
     margin: 50px;
-    width: 21.1%;
     elevation: 50px;
     background: white;
     flexDirection: 'colunm';
-    
+
 }
 
 .contenido{
   text-align: center;
   padding: 15px;
+   font-size: 15px;
 }
 .reacciones{
   width: 100%;
@@ -22,9 +22,10 @@
 
 
 }
-.cajitas_reacciones{
+.ContenedorArtistBox{
 
+  display : -webkit-flex;
 }
-.iconos{
+.CajaArtistBox{
 
 }

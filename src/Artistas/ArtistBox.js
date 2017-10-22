@@ -6,20 +6,23 @@ import TiMessages from 'react-icons/lib/ti/messages'
 //import fire from './myApi/firebase';
 
 
-const imagen= 'https://files.setbeat.com/assets/tmp/s_256934.jpg';
-const likes = 124;
-const comments= 250;
+
 class ArtistBox extends Component {
 
   render() {
+    console.log(this.props.artist);
+    const {name, likes, imagen, comments}=this.props.artist;
+
     return (
-      <div>
+      <div className="ContenedorArtistBox">
+
+      <div className="CajaArtistBox">
         <section className="ArtixBox">
 
           <img src={ imagen }/>
             <div className="contenido">
 
-            <h1>Andy Shouf</h1>
+            <h1>{name}</h1>
             <div className="reacciones">
                 <div className="cajitas_reacciones">
                   <TiHeartOutline size={50} color={'#ec407a'}/>
@@ -37,6 +40,8 @@ class ArtistBox extends Component {
         </section>
         </div>
 
+
+</div>
 
 
 

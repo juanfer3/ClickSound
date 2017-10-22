@@ -1,0 +1,43 @@
+import React,{ Component } from 'react';
+import './App.css';
+import ArtistBox from'./Artistas/ArtistBox';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import RaisedButton from 'material-ui/RaisedButton';
+
+import {GridList, GridTile} from 'material-ui/GridList';
+import {getArtists} from './myApi/api-artists';
+
+//import fire from './myApi/firebase';
+
+
+
+class App extends Component {
+  state = {
+    artists:[]
+  }
+
+  componentDidMount(){
+    getArtists()
+      .then(data => this.setState({artists: data}))
+  }
+
+  render() {
+    const artists = this.state.artists
+
+    {console.log(this.state.artists);}
+
+    {console.log(artists);}
+
+    return (
+
+        <MuiThemeProvider>
+          <ArtistBox artists={artists}/>
+
+        </MuiThemeProvider>
+
+
+    );
+  }
+}
+
+export default App;
