@@ -1,0 +1,30 @@
+.ArtixBox{
+    margin: 50px;
+    width: 21.1%;
+    elevation: 50px;
+    background: white;
+    flexDirection: 'colunm';
+    
+}
+
+.contenido{
+  text-align: center;
+  padding: 15px;
+}
+.reacciones{
+  width: 100%;
+  display : -webkit-inline-flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content:  space-around;
+
+
+
+
+}
+.cajitas_reacciones{
+
+}
+.iconos{
+
+}
