@@ -6,6 +6,7 @@ function  getArtists(){
     .then(data => data.topartists.artist)
     .then(artists => artists.map(artist=>{
        return{
+         id: artist.id,
          name: artist.name,
          imagen: artist.image[3]['#text'],
          likes: 200,

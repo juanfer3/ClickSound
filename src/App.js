@@ -1,34 +1,27 @@
 import React,{ Component } from 'react';
 import './App.css';
-import ArtistBox from'./Artistas/ArtistBox';
-import { getArtists } from './myApi/api-artists'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import ArtistList from './Artistas/ArtistList';
+import Navbar from './Navbar/Navbar';
+
 //import fire from './myApi/firebase';
 
 
 
-
 class App extends Component {
-  constructor(props) {
-        super(props);
-        this.state = { artists: [] };
-    }
 
-    componentDidMount(){
-    getArtists()
-      .then(data => this.setState({artists: data}))
-  }
+
 
   render() {
 
 
     return (
+      <MuiThemeProvider>
+        <Navbar/>
 
-        <div>{this.state.artists.map(artist=>{
-          return <ArtistBox artist={artist}/>
-        })
+        {this.props.children}
 
-      }</div>
-
+      </MuiThemeProvider>
 
 
     );

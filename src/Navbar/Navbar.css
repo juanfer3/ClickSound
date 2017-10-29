@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Josefin+Sans|Lobster');
+.Nav{
+  color: white !important;
+  font-family: 'Anton', sans-serif;
+  display: flex;
+
+
+
+}
+.Titulo{
+
+  color: white !important;
+  margin-left: 37%;
+
+}
+.CajaTitulo{
+  border: 3px solid white;
+  margin-left:5%;
+  width: 405%;
+  margin-top: 10%;
+}

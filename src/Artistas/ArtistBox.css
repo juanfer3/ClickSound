@@ -25,7 +25,10 @@
 .ContenedorArtistBox{
 
   display : -webkit-flex;
+
+
 }
 .CajaArtistBox{
+  margin-top: 150px;
 
 }
