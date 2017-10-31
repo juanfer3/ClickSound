@@ -1,17 +1,10 @@
-import React,{ Component } from 'react';
-import './App.css';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import ArtistList from './Artistas/ArtistList';
-import Navbar from './Navbar/Navbar';
-import Login from './Login/Login';
-import firebase from 'firebase';
-import fire from './myApi/firebase';
+import React, { Component } from 'react';
+import './Login.css'
+import fire from './../myApi/firebase';
+import firebase from 'firebase'
 
-//import fire from './myApi/firebase';
+class Login extends Component {
 
-
-
-class App extends Component {
   constructor(){
     super();
     this.state ={
@@ -55,12 +48,7 @@ class App extends Component {
       );
     } else{
       return(
-        <MuiThemeProvider>
-          <Navbar/>
-            {this.props.children}
-            <div><button onClick={this.handleAuth.bind(this)}>Login con Google</button></div>
-        </MuiThemeProvider>
-
+        <div><button onClick={this.handleAuth.bind(this)}>Login con Google</button></div>
 
       )
 
@@ -68,18 +56,13 @@ class App extends Component {
     //si no lo esta
   }
 
-
   render() {
-
-
     return (
-      <div className="App">
+      <div className="boton">
         {this.renderLoginButton()}
       </div>
-
-
     );
   }
 }
 
-export default App;
+export default Login;

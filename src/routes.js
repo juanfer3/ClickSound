@@ -15,6 +15,7 @@ export default class AppRoutes extends Component {
         <Router history={hashHistory}>
           <Route path="/" component={App}>
             <IndexRoute component={ArtistList} />
+            <Route name="/Home" component={ArtistList} />
             //<Route name="/detalle" component={ArtistDetailView} />
           </Route>
         </Router>
